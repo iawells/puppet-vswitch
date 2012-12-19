@@ -12,7 +12,7 @@ class vswitch::ovs {
     ensure      => running,
     enable      => true,
     #hasstatus   => true,
-    require	 => Package["openvswitch-switch"],
+    require	 => Package["openvswitch-switch", "openvswitch-datapath-dkms"],
     #status      => "/etc/init.d/openvswitch-switch status",
   }
 }
